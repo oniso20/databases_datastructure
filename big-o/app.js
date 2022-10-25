@@ -19,3 +19,20 @@ function addUpTo2(n) {
 
 console.log(addUpTo(10000000));
 console.log(addUpTo2(10000000));
+
+// Frequency counter
+
+Examples:
+
+function areThereDuplicates(array) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] === array[i]) {
+                return true;
+            }
+        }
+    }
+}
+
+console.log(areThereDuplicates([1, 2, 3])); // false
+console.log(areThereDuplicates([1, 2, 2])); // true
