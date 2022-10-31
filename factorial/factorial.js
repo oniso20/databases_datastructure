@@ -3,6 +3,12 @@ function sumRange(num) {
 
     return num + sumRange(num - 1);
 }
+
+//One liner
+const sumRange2 = (num) => num === 1 ? 1 : num + sumRange(num - 1);
+
+
+console.log(sumRange2(5));
 console.log(sumRange(5));
 
 function factorial(num) {
