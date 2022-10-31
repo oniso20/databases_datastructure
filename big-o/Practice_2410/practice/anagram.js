@@ -8,13 +8,9 @@
 
 
 function validAnagram(str1, str2) {
-    str1 = str1.toLowerCase().split();
-    str2 = str2.toLowerCase().split();
-    for (let i = 0; i < str1.length; i++) {
-        if (str1[i].includes(str2)) {
-            return console.log(true);
-        } else { return console.log(false); }
-    }
+    str1 = str1.toLowerCase().split('').sort((a, b) => a.localeCompare(b));
+    str2 = str2.toLowerCase().split('').sort((a, b) => a.localeCompare(b));
+    return str1.join('') === str2.join('') ? console.log(true) : console.log(false);
 }
 
 validAnagram('', ''); // true
