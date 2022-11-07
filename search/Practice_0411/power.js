@@ -11,7 +11,22 @@ function power(base, exponent) {
     return base * power(base, exponent - 1);
 }
 
+function power2(base, exponent) {
+    let total = 1;
+    if (exponent === 0) return 1;
 
-console.log(power(2, 0)); // 1
-console.log(power(2, 2)); // 4
-console.log(power(7, 3)); // 343
+    for (let i = exponent; i >= 1; i--) {
+        total *= base;
+    }
+
+    return total;
+}
+
+
+// console.log(power(2, 0)); // 1
+// console.log(power(2, 2)); // 4
+// console.log(power(7, 3)); // 343
+
+console.log(power2(2, 0)); // 1
+console.log(power2(2, 2)); // 4
+console.log(power2(7, 3)); // 343
